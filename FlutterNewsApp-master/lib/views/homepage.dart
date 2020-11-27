@@ -43,14 +43,22 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         child: ListView(padding: EdgeInsets.zero, children: <Widget>[
           DrawerHeader(
-            child: Text('Bringing You Top News From Around The World',
-
-            style: TextStyle(fontSize: 25),
+            child: Text(
+              'Bringing You Top News From Around The World',
+              style: TextStyle(fontSize: 25),
             ),
-            decoration: BoxDecoration(color: Colors.red),
+            decoration: BoxDecoration
+            (color: Colors.red),
           ),
+          
           ListTile(
             title: Text('About'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('Contact Us'),
             onTap: () {
               Navigator.pop(context);
             },
